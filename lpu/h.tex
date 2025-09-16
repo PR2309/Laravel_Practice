@@ -1,0 +1,98 @@
+% Use the Ctrl+Alt+B shortcut to compile the .tex file into a PDF.
+% Use the Ctrl+Alt+V shortcut to preview the PDF in the built-in viewer.
+
+% Basics of LaTeX
+% 
+% LaTeX is a typesetting system commonly used for technical and scientific documents. It is based on the TeX typesetting system, which was created by Donald Knuth. LaTeX provides a high-level language for creating professional documents, including academic papers, theses, and resumes.
+% 
+% Basics: https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes
+% LaTeX documentation: https://www.latex-project.org/help/documentation/
+% 
+% 
+% Step 1: Installation
+% The LaTeX Workshop extension requires a LaTeX distribution to compile .tex files. You need to install one of the following:
+% (i) MiKTeX (Windows): https://miktex.org/download
+% (ii) TeX Live (Linux/Mac): https://www.tug.org/texlive/
+% (iii) MacTeX (Mac): https://www.tug.org/mactex/
+% 
+% 
+% Step 2: After installing the LaTeX distribution, verify that it’s correctly installed and accessible from the command line:
+%   Open a terminal or command prompt.
+%   Run the following command:
+%       latexmk --version
+% If the command returns a version number, the installation is successful.
+% 
+% 
+% Step 3: Adding Path:
+%   Add the path to the LaTeX distribution's bin directory (e.g., C:\Program Files\MiKTeX 2.9\miktex\bin\x64 for MiKTeX).
+%   Add the following line(Linux):
+%       export PATH=/usr/local/texlive/2023/bin/x86_64-linux:$PATH
+%   (Replace the path with the correct one for your TeX Live installation.)
+%   Save the file and run source ~/.bashrc (or the appropriate file) to apply the changes.
+% 
+% 
+% Step 4: LaTeX Workshop Extension:
+%   The LaTeX Workshop extension provides a live preview of the compiled document. It also allows you to compile the .tex file into a PDF using the Ctrl+Alt+B shortcut.
+% 
+% Open a terminal and edit your shell configuration file (e.g., .bashrc, .zshrc, or .bash_profile).
+% 
+% 
+% Step 5: Test LaTeX Workshop
+% Open your .tex file in VS Code.
+% Use the Ctrl+Alt+B shortcut to compile the file.
+% Use the Ctrl+Alt+V shortcut to preview the PDF.
+% 
+
+
+
+
+% cv.tex
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+
+% Title
+\title{\textbf{John Doe's CV}}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+% Contact Information
+\section*{Contact Information}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Email:} john.doe@example.com
+    \item \textbf{Phone:} +1 (123) 456-7890
+    \item \textbf{LinkedIn:} linkedin.com/in/johndoe
+    \item \textbf{GitHub:} github.com/johndoe
+\end{itemize}
+
+% Education
+\section*{Education}
+\subsection*{University of Example}
+\textbf{Bachelor of Science in Computer Science} \hfill \textit{Graduated: May 2023} \\
+GPA: 3.8/4.0 \\
+Relevant Coursework: Data Structures, Algorithms, Machine Learning
+
+% Experience
+\section*{Experience}
+\subsection*{Software Engineer Intern}
+\textbf{Example Tech Company} \hfill \textit{Summer 2022} \\
+\begin{itemize}[leftmargin=*]
+    \item Developed a web application using React and Node.js.
+    \item Optimized database queries, reducing response time by 30\%.
+    \item Collaborated with a team of 5 engineers using Agile methodologies.
+\end{itemize}
+
+% Skills
+\section*{Skills}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Programming Languages:} Python, JavaScript, Java, C++
+    \item \textbf{Tools:} Git, Docker, VS Code, LaTeX
+    \item \textbf{Languages:} English (Fluent), Spanish (Intermediate)
+\end{itemize}
+
+
+\end{document}

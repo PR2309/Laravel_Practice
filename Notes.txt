@@ -1,0 +1,86 @@
+
+~> Installation Process:
+xampp version:
+	php --version 
+	(XAMPP v8.2 or high)
+
+install composer, git, 7zip    from web
+	(turn on developer mode, and  uncheck proxy server during composer installation)
+	Composer Docs: https://getcomposer.org/
+
+run command:
+	composer global require laravel/installer
+then: (to check Laravel details)
+	laravel
+
+[If already installed]{
+then: (turn on composer in new cmd window)
+      composer
+}
+then: (change path to your project)
+	cd ./path/of/project/../
+
+then: (create new project)
+	laravel new project-name
+
+then: (Starter Kit)
+	none
+then: (Framework - PEST for 0)
+	0
+then: (Default database)
+	sqlite
+then: (to create different migration files)
+	yes
+
+Laravel Documentation:
+	https://laravel.com/docs/installation#next-steps
+Laravel Bootcamp:
+	https://bootcamp.laravel.com/
+
+------------------------------------------------------------------------------
+To start laravel server:
+	php artisan serve
+
+~> Types of keywords (3):
+	required:
+
+------------------------------------------------------------------------------
+~> MVC(Model View Controller) Architecter:
+ Model : deals with our business logic and database
+ View: UI and Html files
+ Provider: provides common data to all the pages
+
+The Project:
+User.php is for Model
+
+./routes/web.php is for creating routes
+
+
+
+Command to create a controller:
+
+
+
+
+
+<?php
+// Has a risk to get attacked
+?>
+
+@php
+// is more secured to cyber attacks
+@endphp
+
+in laravel we don't need to write echo we can directly write html code enclose the vriable in double {{}} like in react js
+
+
+command to make resource controller:
+	php artisan make:controller ControllerName --resource
+
+
+command to make middleware:
+	php artisan make:middleware MiddlewareName
+
+
+Cross platfomr token
+@csrf

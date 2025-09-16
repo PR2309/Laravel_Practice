@@ -1,0 +1,597 @@
+~> Laravel was create in July 2011.
+~> Laravel was created by Taylor Otwell.
+~> The father of PHP is Rasmus Lerdorf
+~> Laravel is an open-source widely used PHP framework.
+~> Laravel works on a MVC(Model View Controller) Framework.
+~> Laravel is released under the MIT license. Therefore, its source code is hosted on GitHub. 
+
+~> What is a Framework?
+    A platform having some pre-written programming language that has more features, tools and functions than a programming language for fast and easy development.
+    Features of Laravel:
+        Routing
+        DataBase connection
+        Well Managed Code
+        Project Structure
+    Tools for Laravel:
+        PHP & composer
+        Laravel package
+        We can use any OS(Windows, macOS, Linux, etc.)
+
+~> Model View Controller(MVC) Architecture:
+    It's a software design pattern used to separate an application into three main components.
+    Model:
+        It represent data that can be in a variety of databases.
+        It interacts with the database and performs operations like retrieving, saving, and updating data.
+        The Model handles data, database communications and business logic.
+    View:
+        It represents what the user see in html.
+        The user interface (UI) of the application.
+        It is the front-end part where the user interacts with the app.
+        The View is responsible for rendering the data provided by the Model.
+        Views are powered by blade templates.
+        Blade templates combine HTML and PHP code in a single file.
+        The View handles the presentation layer.
+    Controller:
+        Request initially goes here.
+        It represents as a middleware.
+        Working as a controller and router both.
+        It helps user to interact safely with the data Model.
+        It's a central unit handling user's request, model and views.
+        The Controller acts as an intermediary that manages the flow between Model and View.
+    Diagram (MVC Architecture):
+                    [__________________Controller______________________]
+                 ↙(Send Data)     ↑(Request)     ↘(Request Data)  ↖(Response Data)
+            [_View_]              ↑              [___________Model__________]
+                ↘(Respose)        ↑
+               [________End_User________]
+
+~> Composer (npm for PHP):
+    Composer is a dependency manager for PHP.
+    Composer is a package manager for PHP, similar to npm for JavaScript.
+    It allows users to manage libraries and dependencies that the Laravel project needs automatically, such as: 
+        Laravel itself
+        third-party packages
+        and other PHP libraries.
+    Composer helps by keeping project organized and makes it easier to update libraries.
+    It reads from a composer.json file to know which libraries are needed in the project.
+    It installs, updates, and manages these dependencies for you automatically.
+    It can be used to install Laravel and other packages which might be needed in project.
+    CLI Installation:
+        command (to instsll it globlly):
+            curl -sS https://getcomposer.org/installer | php
+        [for mac/Linux]:
+        Move the Composer executable to a directory in your PATH for global use:
+        command:
+            mv composer.phar /usr/local/bin/composer
+        command (to install dependencies setup):
+            composer install
+    GUI Installation:
+        (turn on developer mode, and  uncheck proxy server during composer installation)
+	    Composer Docs: https://getcomposer.org/
+    To check installation:
+        command:
+            composer --version
+    Note:
+        options:
+            curl is a command-line tool used to transfer data from or to a server using various protocols (like HTTP, HTTPS, FTP, etc.).
+            -s (silent): This option makes curl operate in "silent" mode, meaning it won't display progress information or any unnecessary output while downloading the file.
+            -S (show errors): This option ensures that if any errors occur, curl will still display them, even when running in silent mode.
+
+~> Laravel can be use to build:
+    - Monolithic applications:
+        A monolithic application is a traditional software architecture where all the application components are tightly integrated into a single system.
+        In a monolithic Laravel app, you would typically have both the backend (logic, database) and frontend (views) in one unified application.
+        Laravel excels at building monolithic applications because:
+            - MVC Architecture: 
+                Laravel follows the Model-View-Controller (MVC) pattern, which allows for well-organized, scalable, and maintainable applications.
+            - Full-stack Development: 
+                Laravel can be used to manage both the backend and frontend in the same codebase.
+                It has robust routing, controllers, models, migrations, and built-in tools to manage everything from database structure to form validation.
+            - Blade Templating Engine: 
+                Laravel’s Blade engine allows you to build dynamic views (HTML) directly within the application.
+            - Eloquent ORM:
+                Laravel provides an elegant way to interact with databases through its ORM (Object-Relational Mapping), making it easier to query databases without writing raw SQL.
+    - Standalone APIs:
+        An API (Application Programming Interface) that serves as a backend for external clients (such as web applications, mobile apps, or other services)
+        Standalone APIs are typically used to handle business logic and interact with the database, serving data in response to client requests.
+        It can handle CRUD operations and returns JSON responses.
+        It also secures the API optionally with token-based authentication using tools like Sanctum or Passport.
+    *- Microservices Architecture:
+        Microservices architecture is a software development technique that structures an application as a collection of small, independent services. Each service is responsible for a specific business capability and can be developed, tested, and deployed independently.
+        Laravel can be used to build microservices architecture by using the following features:
+    *- Service Discovery:
+        Laravel provides a built-in service discovery mechanism that allows you to register and discoverservices within your application.
+
+
+~> Lararvel can be integrate it with other frameworks like react.js, vue.js, next.js using it's JSON library (named Inertia).
+
+~> Laravel has:
+    Expressive, Elegant syntax.
+    It's a web framework of php providing a structure and starting point for web apps.
+    It's a free, open-source, and widely used framework.
+    It provides features such as:
+        Dependancy Injections:
+            Dependency injection is a fancy phrase that essentially means this: class dependencies are "injected" into the class via the constructor or, in some cases, "setter" methods.
+        expressive Database abstraction layer
+        queues and schedules jobs
+        unit and integration testing
+
+~> Laravel is a Progressive framework:
+    It's vast libraries, documentations, guides and video tutorials helps everyone froma beginner to and advance web developer.
+    As for senior developers laravel provides: dependenciey injection, unit testing queueu, real-time events, etc.
+
+~> Laravel is a Scalable Framworks:
+    As per scaling-friendly nature of php, laravel being  a framework of php inherited php scalability.
+    Laravel applications have been easily scaled to handle hundreds of millions of requests per month.
+    It also has a fast distributed cache system like Redis.
+
+~> Laravel is a Community Framework:
+    Many developers have contributed to this framework.
+    It also combines  the best pakages in the PHP ecosystem for a robust and developer friendly enviroment.
+
+~> Prerequisites (To use Laravel):
+    We need:
+        PHP(XAMPP or any other PHP Package), Composer, 7zip(if we doon't have any decompressor in device), git(optional).
+    PHP:
+        Laravel is a PHP framework, so PHP needs to be installed.
+        Laravel requires PHP 7.3 or higher.
+        Latest long term support versions of Larvel 9 & 10 requires PHP v8.2 or higher.
+        Download XAMPP from: https://www.apachefriends.org/download.html
+    Composer:
+        It's like npm for PHP.
+        It manages libraries and dependencies for your PHP projects.
+        This is a dependency manager for PHP.
+        It helps you manage PHP libraries and frameworks like Laravel.
+        Download from: https://getcomposer.org/
+    7zip / WinZip / WinRAR / PeaZip / BandiZip:
+        This is a file compression tool (similar to WinRAR) for extracting compressed files.
+        It helps to decompress the compressed files donwloaded, during installation.
+        Download (7zip) from: https://www.7-zip.org/
+        Download (WinZip) from: https://www.winzip.com/en/
+        Download (WinRAR) from: https://www.win-rar.com/start.html?&L=0
+        Download (PeaZip) from: https://peazip.github.io/
+        Download (BandiZip) from: https://www.bandisoft.com/bandizip/
+    Git:
+        It's optional to use it.
+        It also helps in cli installation during setup, similar to powershell, command prompt, etc.
+        Git is a version control system, though it's optional for Laravel.
+        It's commonly used to manage code repositories and collaborate with others.
+        Download from: https://git-scm.com/downloadsx
+
+~> Installation:
+    Laravel can be installed using either laravel installer or composer installer.
+    Steps for global step up of laravel.
+    this commands runs only once and install laravel installer globally using composer installation tool
+    It is faster than using new keyword.
+        Step 1:
+            XAMPP version must be or more.
+            if lower install latest version, but keep a backup of XAMPP data.
+            Reinstallation can delete all the existing data of XAMPP.
+            command: (to check php version)
+                php --version
+        Step 2:
+            Install composer, 7zip and git from web.
+            (turn on developer mode, and  uncheck proxy server during composer installation)
+            Composer Docs: https://getcomposer.org/
+        Step 3:
+            Install Laravel using composer.
+            command:
+                composer global require laravel/installer
+        Step 4:
+            Check Laravel details.
+            command:
+                laravel
+        Step 5:
+            Open a new window cli.
+            Turn on composer (if already installed)
+            command:   
+                composer
+        Step 6:
+            Change the path for app creation.
+            command:
+                cd /path_of_project_destination/
+        Step 7:
+            Create new project.
+            command:
+                laravel new project-name
+        Step 8:
+            then: (Starter Kit)
+                none
+            then: (Framework - PEST for 0)
+                0
+            then: (Default database)
+                sqlite
+            then: (to create different migration files)
+                yes
+    Step for local setup:
+        Step 1 & 2:
+            Same as for global setup.
+            Installation of Prerequisites(XAMPP, Composer, 7zip, Git) is needed.
+        Step 3:
+            Change the path for app creation.
+            command:
+                cd /path_of_project_destination/
+        Step 4:
+            Instead of using laravel new, we can also create a Laravel project by using Composer's create-project command tool.
+            create a laravel project
+            command:
+                composer create-project laravel/laravel app-name
+        By default:
+            Laravel uses the SQLite database for local development.
+            If you want to use MySQL or PostgreSQL, we need to install the respective database driver and configure the database connection in the .env file.
+
+
+~> Laravel Documentation:
+	https://laravel.com/docs/installation#next-steps
+~> Laravel Bootcamp:
+	https://bootcamp.laravel.com/
+
+*~> Cross-Site Request Forgery (CSRF) Token:
+    It is a web security vulnerability that allows an attacker to induce users to perform actions that they do not intend to perform.
+    It leverages the fact that browsers send credentials like cookies automatically with every request to a domain.
+    Laravel provides an easy and convenient way to protect your application from CSRF attacks.
+    CSRF Token:
+        Laravel automatically generates a CSRF "token" for each active user session managed by the application.
+        This token is used to verify that the authenticated user is the one actually making the requests to the application.
+        The token is a random string that changes each time the session is regenerated, making it inaccessible to malicious actors.
+
+~> Localization?
+    Localization is the process of translating your application’s messages (like "Welcome", "Submit", etc.) into different languages, so users can view your app in their preferred language.
+    Supports multi-language applications.
+    Helps reach a wider audience (English, Hindi, etc.)
+    Easily manage translations in language files (not hardcoded)
+    Showing UI messages dynamically depending on user language.
+    Storing all language content in one place.
+    __()	Laravel helper to get translated message
+    App::setLocale()	Set current language
+    resources/lang/xx	Language folder (e.g., en, hi)
+    Inside lang/xx create message.php files returning associative array to convert words into words. 
+    session(['lang' => $lang])	Store current language in session
+
+
+*~> Migrations:
+    These are used to version control your database schema.
+    They allow you to modify your database schema in a structured and consistent way.
+
+*~> Database Seeding: Term for populating the database with dummy data for testing purposes.
+
+*~> Data Echoing:
+    The process of displaying variables in your views.
+    It prevents Cross-Site Scripting(XSS) and
+    Blade provides {{ }} syntax to safely echo data and automatically escape any HTML to prevent XSS (cross-site scripting) attacks.
+    Use {!! !!} when you're sure the content is safe to render as HTML (e.g., when it's coming from trusted sources or already sanitized).
+    Example:
+        $name = '<script>alert("XSS Attack!")</script>';
+        Blade: 
+        <p>{{ $name }}</p>
+        <p>{!! $name !!}</p>
+        html:
+        <p>&lt;script&gt;alert("XSS Attack!")&lt;/script&gt;</p>
+        <p><script>alert("XSS Attack!")</script></p>
+
+*~> Eloquent ORM(Object-Relational Mapping):
+    Laravel's Eloquent is an Object-Relational Mapping (ORM) tool.
+    It simplifies interaction with the database by allowing you to use PHP syntax instead of SQL queries.
+    A Model is a PHP class that represents a database table.
+    Each instance of the Model represents a row in the database table.
+    Eloquent assumes the table has a 'created_at' and 'updated_at' columns by default.
+    It has easy, simpler, and more readable syntax.
+    It's easy to handle relationships usign this by( one-to-one, many-to-one, many-to-many, has-many-through). 
+    Query building methods:
+        Eloquent supports several convenient methods to help you construct queries without needing raw SQL:
+            where: Adds a WHERE clause to your query.
+            orderBy: Orders the result set.
+            limit: Limits the number of records.
+            join: Performs a SQL JOIN operation.
+            pluck: Retrieves a single column’s values.
+            count, sum, avg: Perform aggregate functions.
+    Example:
+        (i) Fetching Data (SELECT): To retrieve all records from a database table:
+            $posts = Post::all(); // Returns all posts from the 'posts' table
+        (ii) To retrieve specific records based on conditions:
+            $posts = Post::where('status', 'published')->get(); // Fetch published posts
+        (iii) Inserting Data (INSERT): You can create a new record and save it to the database:
+            $post = new Post;
+            $post->title = 'New Post';
+            $post->content = 'This is the content of the post';
+            $post->save();
+            // Alternatively
+            Post::create([
+                'title' => 'Another Post',
+                'content' => 'Content for this post.'
+            ]);
+        (iv) Updating Data (UPDATE): You can update an existing record by finding it and modifying its properties:
+            $post = Post::find(1); // Find a post with an ID of 1
+            $post->title = 'Updated Post Title';
+            $post->save(); // Save the changes to the database
+        (v) Deleting Data (DELETE): To delete a specific record:
+            $post = Post::find(1);
+            $post->delete();
+
+#~> Artisan (a CLI tool):
+    Laravel comes with a robust CLI tool called Artisan.
+    It's a tool to automate common tasks and save time by simplifying repetitive tasks.
+    It provides a set of commands to interact with Laravel application.
+    Which allows users to perform tasks like generating controllers, models, migrations, and running your application’s server.
+    Example:
+    (i) General Help command:
+        To see list of commands:
+            php artisan list
+    (ii) Running Development Server:
+        To Run development Server (default is localhost:8000):
+            php artisan serve
+    (iii) Creating Resources:
+        To create a new Controller:
+            php artisan make:controller ControllerName
+        To create a new Model:
+            php artisan make:model ModelName
+        To create a new Migration:
+            php artisan make:migration create_table_name
+        To create a new request:
+            php artisan make:request RequestName
+        To create a new seeder for populating your database:
+            php artisan make:seeder SeederName
+    (iv) Database Operations:
+        To Run Migrations:
+            php artisan migrate
+        To roll back the last batch of migrations:
+            php artisan migrate:rollback
+        Database Seeding:
+            Populating database with dummy data for testing purposes.
+            command:
+                php artisan db:seed
+    (v) Cache Management:
+        To clear cache:
+            php artisan cache:clear
+        To clear the configuration cache:
+            php artisan config:clear
+    (vi) Other Commands:
+        To generate a new application key (used for encryption and security):
+            php artisan key:generate
+        To optimize the application for better performance:
+            php artisan optimize
+        To process jobs in the queue:
+            php artisan queue:work
+        To open an interactive shell for testing Eloquent queries or running code:
+            php artisan tinker
+
+~> Artisan tool - Tinker:
+    Artisan also includes a tool called Tinker, which is a REPL (Read-Eval-Print Loop) for interacting with your application via the command line.
+    It allows you to execute PHP code in the context of your application, making it easier to test and experiment with your application without having to write a lot of boilerplate code.
+    To close it, press CTRL+C or write - exit 
+    To open an interactive shell for testing Eloquent queries or running code:
+        php artisan tinker
+ 
+~> Blade (a Templating Engine):
+    It's a templating engine that allows you to write clean, readable, and maintainable templates.
+    It allows us to work easily with HTML, CSS and PHP in views(Part of application visible to users).
+    It helps to create reusable and maintainable layouts and views, separating PHP logic from presentation.
+    It allows us to write a clean and simpler PHP code without using plain PHP syntax, similar to react.js.
+    It also supports teplate inheritance, data binding, conditionals and loops.
+    Non-blade files having just .php will also render just like other view, but the blade features won't be available inside it.
+
+~> Blade Directives: Blade has special directives (like @if, @foreach, @foreach, @include, etc.) that make it easy to write PHP-like logic in views.
+~> Blade features: (@if, @elseif, @else, @endif, @foreach, @endforeach, @for, @endfor, @while, @endwhile, @yield, @extends, @include, @section, @endsection, @stack, @push, @endpush, @datetime, @each, @auth, @guest, @show, @unless, @csrf)
+
+~> Routing:
+    It's a path to open a webpage, also called as URL(Uniform Resource Locator).
+    Laravel has a simple and flexible routing system that allows you to define routes for your application in the routes/web.php file.
+    structure: domain_Name/path_Of_File
+    eg. https://www.php.net/docs.php
+    Due to some security reasons, we can customize routes path in laravel by default.
+    We can hide file extensions to hide the language used to create the website.
+    We can hide complete file name, from getting displayed in th eurl with desired text.
+    We create routes inside "./routes/web.php"
+    Custome route will be the first parameter, the output of page will be the second parameter
+    Second prameter can be a fucntion or a controller or a method.
+    structure: Route::method(param1,param2)->name("routeName");
+    Routes accept dynamic parts called parameters.
+    - Types of routing parameters:
+        (i) Required: That must be present in the URL.
+        (ii) Optional: May or may not be present in the URL.
+        (iii) Parameters with Constrains(Regex): Limiting the values allowed to where() method using regex.
+    - Named Routes:
+        Naming a route is optional.
+        To reduce typo mistakes and errors.
+        When path or url of route is too conplex or logn to remember, we use it's custom name.
+        We name routes using -> name(); at the end of route. 
+        It's basically alternate nickname for the url.
+        If the route path ever changes, we have to manually update it if we don't use names.
+        If the path changes in the future, this still works as long as the name namedHome stays the same.
+        We can use define() as <a href='{{route('routeName')}}'>Same Route</a>.
+
+~> View Creation:
+    It basically creates a view for UI of the project completely, if we return the page using view() in a function.
+    Views are basically HTML+PHP files which laravel returns to the browser.
+    syntax:
+        Route::method("/route",function(){return view("page_Name");});
+    command:
+        php artisan make:view parentFolder.viewBladeFileNameOnly
+    Data Passing in views:
+        (i) Passing Associative Array:
+            syntax:
+                return view('greeting', ['name' => 'John']); // inside web.php file
+                Hello, {{ $name }}  <!-- Inside Blade file -->
+        (ii) Using with() Method:
+            syntax:
+                return view('greeting')->with('name', 'John')->with('age', 25);
+        (iii) Using compact() Method:
+            syntax:
+                $name='John';
+                $age=25;
+                return view('greeting', compact('name', 'age'));
+        (iv) Passing Objects or Collections:
+            syntax:
+                $user = User::find(1);
+                return view('profile', ['user' => $user]);
+        (v) Sharing Data Globally:
+            syntax:
+                View::share('appName', 'My Laravel App');
+
+
+~> Directory/Application Structure:
+    - Files in Root Directory:
+        (i) artisan:
+            This is the command-line tool for interacting with the Laravel application (Artisan CLI).
+        (ii) composer.json:
+            This file contains the project's detials including dependencies, scripts, and metadata.
+            Composer uses this file to install and manage packages.
+            Similar to package.json for PHP dependencies.
+        (iii) composer.lock:
+            This file locks the specific versions of the dependencies, ensuring consistent installs across all environments.
+            Similar to package-lock.json for PHP dependencies.
+        (iv) package.json:
+            This file contains metadata about the project, including dependencies, scripts, and other information.
+            It manages the client-side logic (JavaScript).
+            It's useful for integrations of different other frontend framwork integrations as well like react.js, vue.js, etc
+        (v) .env:
+            This file contains environment-specific variables (e.g., database credentials, app keys).
+            It's used to store sensitive data that should not be committed to the repository.
+            It's used for managing configuration settings in different environments like local, staging, production, etc.
+        (vi) .env.example:
+            This file contains example environment variables for the application.
+            It's commonly used to provide a sample .env file with default or placeholder values.
+            It's like a backup file for .env file if some values have been changed accidentally.
+            Developers can copy this file to create their own .env file with specific environment configurations.
+        (vii) .gitignore:
+            This file specifies files and directories that should be ignored by Git.
+            It's used to prevent sensitive data and ignored by git, from being committed to the repository.
+        (viii) .gitattributes:
+            Specifies attributes for files in the repository for Git, like handling line endings or binary files.
+            This file defines attributes for path handling and Git operations.
+            It helps manage how Git treats files in the repository, including handling of line endings, merge behavior, and diff settings.
+            It ensures consistency in collaborative projects, especially across different operating systems.
+            This file specifies attributes for files and directories in the repository.
+            It's used to configure Git's behavior for specific files and directories.
+        (ix) .editorconfig:
+            This file specifies coding style settings and conventions for the project across different editors and IDEs.
+            It helps by enforcing a consistent coding style to ensure that all developers working on the project follow the same code formatting standards, regardless of their development environment
+        (x) README.md:
+            This file contains information about the project, including its purpose, usage, and any relevant details.
+            It's typically written in Markdown, a lightweight markup language that allows you to format text in a readable and organized manner
+            It's a common convention in open-source projects to include a README.md to maintain consistency and help developers quickly get started with the project.
+        (xi) phpUnit.xml:
+            This file contains configuration settings for the PHPUnit testing framework.
+            It's used to specify test suites, test cases, and other testing-related settings.
+        (xii) vite.config.js:
+            Provides a local deployment Server.
+            Configuration file for the Vite bundler (used for JavaScript and CSS)
+    *- Folder Structure:
+        (i) app/:
+            Core code of the project is mentioned in it, including the controller, model, service, providers, logic, etc.
+            - Http/:
+                - Controllers/:
+            - Models/:
+            - Providers/:
+        (ii) bootstrap/:
+            Contains files needed for bootstrapping(booting/starting up) the Laravel application, like initializing the app and setting up environment variables.
+            - app.php: The main file that bootstraps the application.
+        (iii) config/:
+            Contains all the configuration files for various services in the application (database( for connection configuration), cache, sessions, etc.).
+            - Examples: app.php, database.php, queue.php, mail.php, etc.
+        (iv) database/:
+            Contains files related to database management.
+            - factories/: Used for generating fake data (for testing).
+            - migrations/: Database migrations for versioning and updating the database schema.
+            - seeders/: Used for populating the database with sample data.
+        (v) public/:
+            This is the document root for the web server.
+            - index.php: The front controller, handling all incoming requests.
+            - assets/: Folder for front-end assets like images, styles, and JavaScript.
+            - build/: If using Vite or Webpack, this is where the build files are stored (JS, CSS, etc.).
+            - favicon.icon: Browser tab icon.
+            - robots.txt: Handling SEO logic for search engine crawler bots.
+        (vi) resources/:
+            Contains the application's view files, language files, and raw assets.
+            - views/: Blade templates (or other view files) used for rendering HTML.
+            - lang/: Language files for localization.
+            - sass/ or js/: Raw CSS, Sass, or JavaScript files (these are compiled via tools like Vite or Webpack).
+        (vii) routes/:
+            Contains all the route definitions for the application.
+            - web.php: Defines routes for web (HTTP) requests.
+            - api.php: Defines routes for API requests.
+            - console.php: Routes for Artisan commands.
+            - channels.php: Routes for broadcasting.
+        (viii) storage/:
+            Stores compiled views, file uploads, cache, and logs.
+            - app/: Stores application-generated files.
+            - framework/: Stores framework-generated files (e.g., cache, sessions).
+            - logs/: Contains log files generated by the application.
+        (ix)tests/:
+            Contains application’s test files.
+            - Feature/: Contains feature tests, which test the functionality of the application.
+            - Unit/: Contains unit tests for testing individual methods or classes.
+        (x) vendor/:
+            This folder is automatically created by Composer and contains all of the project's dependencies.
+            Stroes all the actuall data whose details are mentioned in composer.json file
+            It's like node_modules of node for composer.
+            We don't push it on github because, it's too large, but we push .json files(like pakage.json, package-lock.json, composer.json, composer-lock.json) for keeping metadata and rebuilt.
+            When we clone a project from git we run "composer install" like "npm install" to install vendor folder just like node_modules.  
+
+~> Application Life cycle:
+    - It starts with index.php file [./public/index.php].
+    This file is the entry point of the application.
+    - It loads the bootstrap file [./bootstrap/app.php] which is the main application file.
+    - When user makes a request:
+        It goes to the http kernel [./app/Http/Kernel.php]
+        Which contains middleware to intercept the request.
+        Also registering service providers like routers.
+    - The kernel then calls the router [./app/Http/Router.php] to determine the
+        It controls the action of controller based on the trigger(where to go)
+    - Controller [./app/Http/Controllers/]:
+        It is the core of the application.
+        It handles the request and returns the response.
+        It's a php class, containing a variety of methods like:
+            show-> GET request
+            store -> POST request
+            update -> PUT request
+            delete -> DELETE request
+        Inside those requests we use a model to mke a query to database.
+        Using Eloquent ORM instead of raw SQL query, which is more human-readable.
+    - Model [./app/Models/]:
+        It is responsible for interacting with the database.
+        - View [./resources/views/]:
+
+~> Controllers:
+    These are class based php files.
+    It can group related requests handling logic into a single class.(storing all logic realted to a particular type like user)
+    It connects View and model passing data and handling bussiness logic.
+    There are 3 types of controllers:
+        Basic Controller: 
+            contains just a predefined class and logic needs to be defined.
+            command: php artisan make:controller ControllerName
+        Single Action Controller:
+            controllers which handle only a single request is single action controller.
+            command: php artisan make:controller
+        Resource Controller:
+            to carry out CRUD operations in databases, containing predefined functions and routes.
+            commaand: command: php artisan make:controller ControllerName --resource
+
+~> URL Generation:
+    It's a Laravel feature, that helps to make working with routing, links, url easy by providing some funcitons.
+    We mostly get these files under view files, although we can in controllers as well.
+     - We can check the current URL by which that View is getting accessed
+        using current():
+            {{User::current()}} // Scope resolution 
+            {{url()->current()}}
+                But it won't get parameters
+    - We can get full URL by which view is accessed
+        using full():
+            {{User::full()}} // Scope resolution
+            {{url()->full()}}
+                It takes exact URl on the browser tag
+    - We can get the previous URL by which current URL was accessed
+        using previous():
+            {{User::previous()}} // Scope resolution
+            {{url()->previous()}}
+    - We can make link URL inside href of <a> tags
+        using to('path'):
+            <a href="{{URL::to('path')}}">Path Name</a>
+    - We can generate framework URLs
+        using url() & secure_url():
+            <a href="{{ url('URL_path') }}">Path Name</a>
+            <!-- Output: http://yourapp.test/URL_path -->
+            <a href="{{ secure_url('URL_path') }}">Path Name</a>
+            <!-- Output: https://yourapp.test/URL_path -->
+        Similar to the above, just a shorter version.
+        secure_url() gives https but url() gives http only.
